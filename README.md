@@ -1,6 +1,8 @@
 # Analisis-Diskriminan
 
-    Analisis diskriminan adalah salah satu teknik statistik yang bisa digunakan pada hubungan dependensi (hubungan antarvariabel dimana sudah bisa dibedakan mana variabel respon dan mana variabel penjelas). Contoh kasus yang digunakan dalam latihan ini diadaptasi dari Santoso dan Tjiptono (2002), dimana pengelola Minimarket X menduga bahwa ada dua kelompok pembeli, yaitu mereka yang sering berbelanja di Minimarket X dan mereka yang dapat dikategorikan jarang berbelanja di minimarket tersebut. Kategori konsumen sering belanja, jika konsumen berbelanja di Minimarket X minimal 7 kali dalam sebulan, selain dari itu dikategorikan jarang berbelanja. 
+    Analisis diskriminan adalah salah satu teknik statistik yang bisa digunakan pada hubungan dependensi (hubungan antarvariabel dimana sudah bisa dibedakan mana variabel respon dan mana variabel penjelas). 
+   
+   Contoh kasus yang digunakan dalam latihan ini diadaptasi dari Santoso dan Tjiptono (2002), dimana pengelola Minimarket X menduga bahwa ada dua kelompok pembeli, yaitu mereka yang sering berbelanja di Minimarket X dan mereka yang dapat dikategorikan jarang berbelanja di minimarket tersebut. Kategori konsumen sering belanja, jika konsumen berbelanja di Minimarket X minimal 7 kali dalam sebulan, selain dari itu dikategorikan jarang berbelanja. 
   Pihak pengelola minimarket ingin mengetahui faktor-faktor apa saja yang mendorong seorang konsumen untuk sering berbelanja atau jarang berbelanja di minimarket tersebut. Untuk mencapai tujuan tersebut, setiap responden diberikan kuesioner yang memuat pertanyaan tentang pendapatnya terhadap 10 atribut minimarket, serta frekuensi berbelanja di minimarket tersebut. Atribut-atribut tersebut adalah
 1. Penempatan produk yang dijual (Layout)
 2. Kebersihan minimarket (Bersih)
