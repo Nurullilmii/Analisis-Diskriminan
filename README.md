@@ -19,8 +19,9 @@ a. apakah terdapat perbedaan seorang konsumen untuk sering berbelanja atau jaran
 b. faktor-faktor apa saja yang mempengaruhi perbedaan perilaku tersebut?
 
 
-#1. Menentukan objek dan variabel yang akan dianalisis
+##1. Menentukan objek dan variabel yang akan dianalisis
 Objek dalam kasus ini adalah “belanja” dengan 2 kategori, yaitu sedikit (0) dan banyak (1). Sementara variabel bebasnya ada 10, yaitu Layout, Bersih, Harga, Kasir, Lengkap, AC, Diskon, Parkir, Staf, dan Citra. Data dan cara mengimpor datanya dalam R dilakukan, sebagai berikut:
+
 setwd("D:/KMMI")
 dt.disk <- read.csv("KMMI-Data Latihan An Diskriminan.csv")
 dt.disk
