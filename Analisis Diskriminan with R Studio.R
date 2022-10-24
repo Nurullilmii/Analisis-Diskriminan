@@ -1,0 +1,38 @@
+library(Hmisc) ### untuk uji Multikolinearitas
+library(mvShapiroTest) ### untuk uji Normal Multivariat
+library(MVTests) ### untuk uji Kesamaan Matriks Varians Kovarians
+library(MASS) ### untuk uji Kesamaan Vektor Mean dan Analisis Diskriminan
+library(rrcov) ### untuk Analisis Diskriminan
+setwd("D:/KMMI")
+dt.disk <- read.csv("KMMI-Data Latihan An Diskriminan.csv")
+dt.disk
+dt.disk1 <- dt.disk[1:40,]
+dt.disk2 <- dt.disk[41:50,]
+dt.disk1
+uji.multi<-rcorr(as.matrix(dt.disk1[,-9],type="pearson"))
+uji.multi
+x <- dt.disk1[,-9]
+cm <- colMeans(x)
+S <- cov(x)
+d <- apply(x, 1, function(x) t(x -cm)%*%solve(S)%*%(x -cm))
+plot(qc <- qchisq((1:nrow(x) - 1/2) / nrow(x), df = 4),
+     sd <- sort(d),
+     xlab = expression(paste(chi[4]^2, " Quantile")),
+     ylab = "Ordered distances", xlim = range(qc) * c(1, 1.1))
+uji.mvn<-mvShapiro.Test(as.matrix(dt.disk1[,-9]))
+uji.mvn
+uji.KMV<-BoxM(dt.disk1[,-9],dt.disk1[,9])
+uji.KMV
+uji.KVM <-manova(cbind(ï..Layout,Bersih,Harga,Kasir,Lengkap,AC,Diskon,Parkir,Staf,Citra)~Belanja,data=dt.disk1)
+summary(uji.KVM)
+model.disk<-lda(Belanja~ï..Layout+Bersih+Harga+Kasir+Lengkap+AC+Diskon+Parkir+Staf+Citra,data=dt.disk1)
+model.disk
+plot(model.disk)
+lda.klasik<-LdaClassic(dt.disk1[,-9],dt.disk1[,9])
+pred.klas<-predict(lda.klasik)
+pred.klas
+dt.baru<-dt.disk2[,-9]
+pred.class<-predict(model.disk,dt.baru)$class
+cbind(dt.baru,pred.class)
+
+
