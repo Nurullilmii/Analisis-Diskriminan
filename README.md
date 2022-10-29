@@ -24,7 +24,7 @@ a. apakah terdapat perbedaan seorang konsumen untuk sering berbelanja atau jaran
 b. faktor-faktor apa saja yang mempengaruhi perbedaan perilaku tersebut?
 
 
-#1. Menentukan objek dan variabel yang akan dianalisis
+# 1. Menentukan objek dan variabel yang akan dianalisis
 
 Objek dalam kasus ini adalah “belanja” dengan 2 kategori, yaitu sedikit (0) dan banyak (1). Sementara variabel bebasnya ada 10, yaitu Layout, Bersih, Harga, Kasir, Lengkap, AC, Diskon, Parkir, Staf, dan Citra. Data dan cara mengimpor datanya dalam R dilakukan, sebagai berikut:
 
@@ -34,13 +34,13 @@ Objek dalam kasus ini adalah “belanja” dengan 2 kategori, yaitu sedikit (0) 
 
 ![image](https://user-images.githubusercontent.com/116244436/197431765-6c207a3a-5e7e-4b84-8a95-d567a3ee5323.png)
 
-#2. Pengujian asumsi multikolinearitas 
+# 2. Pengujian asumsi multikolinearitas 
 
 ![image](https://user-images.githubusercontent.com/116244436/197432601-47a5e9b7-961b-4624-ba9d-0e95a6355d7f.png)
 
 Berdasarkan hasil uji multikolinearitas diperoleh bahwa semua variabel bebas mempunyai nilai P > 0.05. Hal ini menunjukkan bahwa tidak terjadi kasus multikolinearitas pada data.
 
-#3. Pengujian asumsi distribusi normal multivariate
+# 3. Pengujian asumsi distribusi normal multivariate
 
 Berikut diberikan syntax untuk membuat plot Chi-Kuadrat untuk melihat secara visual, apakah data mengikuti distribusi normal multivariat. Jika plot tersebut membentuk pola garis lurus, maka dapat diduga data mengikuti distribusi normal multivariat.
 
@@ -56,7 +56,7 @@ Berdasarkan Gambar, terlihat bahwa pola data sepertinya membentuk sebuah garis l
 
 Hasil yang diperoleh adalah nilai-p<0.05. Ini berarti bahwa data tidak mengikuti distribusi normal multivariat.
 
-#4. Pengujian asumsi kesamaan matriks varians kovarian
+# 4. Pengujian asumsi kesamaan matriks varians kovarian
 
 ![image](https://user-images.githubusercontent.com/116244436/197433092-cfe8c51b-0d95-40d4-b6f8-71e43154d8a9.png)
 
@@ -64,7 +64,7 @@ Hasil yang diperoleh adalah nilai-p<0.05. Ini berarti bahwa data tidak mengikuti
 
 Hasil yang diperoleh adalah nilai-p>0.05. Ini berarti bahwa data pada kelompok “berbelanja jarang” dan data pada kelompok “berbelanja sering” adalah homogen.
 
-#5. Pengujian asumsi kesamaan vektor mean
+# 5. Pengujian asumsi kesamaan vektor mean
 
 ![image](https://user-images.githubusercontent.com/116244436/197433276-f42770b7-0b85-4ab1-9f87-6ac531d322de.png)
 
@@ -72,7 +72,7 @@ Hasil yang diperoleh adalah nilai-p>0.05. Ini berarti bahwa data pada kelompok �
 
 Karena nilai-p<0.05, maka diperoleh bahwa terdapat perbedaan vektor mean dari data. Ini menunjukkan bahwa pemisahan kelompok “berbelanja jarang” dan kelompok “berbelanja sering” signifikan.
 
-#6. Mengestimasi fungsi diskriminan
+# 6. Mengestimasi fungsi diskriminan
 
 ![image](https://user-images.githubusercontent.com/116244436/197433483-07735474-2811-4ead-bc73-5f430667e291.png)
 
@@ -86,7 +86,7 @@ Berdasarkan nilai Groups means bahwa variabel “Parkir” dan “AC” untuk ke
 
 ![image](https://user-images.githubusercontent.com/116244436/197433994-1f1ebe52-e5b2-4c46-9eea-78d18c56047f.png)
 
-#7. Mengecek hasil pengklasifikasian 
+# 7. Mengecek hasil pengklasifikasian 
 
 ![image](https://user-images.githubusercontent.com/116244436/197435352-07596f82-8161-4475-a982-792a8ed247e9.png)
 
@@ -94,7 +94,7 @@ Berdasarkan nilai Groups means bahwa variabel “Parkir” dan “AC” untuk ke
 
 Berdasarkan hasil pengklasifikasian diperoleh tingkat keakuratan ((0.960+0.667))/2 = 0.81 (81%) di mana terdapat 6 pengamatan yang salah klasifikasi.
 
-#8. Memprediksi objek baru 
+# 8. Memprediksi objek baru 
 
 ![image](https://user-images.githubusercontent.com/116244436/197437491-8e5175a7-fe9e-49dd-983d-ee87e6180c69.png)
 
